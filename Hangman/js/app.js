@@ -30,12 +30,12 @@ $(function() {
   // if indices.length === randomWord.length
   // compare the score in order to determinate the winner
 
-  $('body').append('<div class="turn"></div>');
+  $('.clearfix').append('<div class="turn"></div>');
   const $turn = $('.turn');
   $turn.text('Player 1 turn');
 
-$('#player1Score').text(player1Score);
-$('#player2Score').text(player2Score);
+  $('#player1Score').text(player1Score);
+  $('#player2Score').text(player2Score);
 
   //creates amount of divs for the length of the word taken from the array
   for (let i = 0; i<randomWord.length; i++){
@@ -58,6 +58,8 @@ $('#player2Score').text(player2Score);
           found = true;
           indices.push(guess);
           $(`.wordLetters:eq(${i})`).text(guess);
+
+          $(`.keys:contains(${guess})`).css('background', 'green');
           audioPing.play();
           console.log(indices.length, randomWord.length);
 
@@ -87,6 +89,7 @@ $('#player2Score').text(player2Score);
       if(!found) {
         //for all incorrect guesses for player1 print a new part of the hangman
         audioBuzzer.play();
+        $(`.keys:contains(${guess})`).css('background', 'red');
         if(player2turn === false) {
           console.log('player1 turn!');
 

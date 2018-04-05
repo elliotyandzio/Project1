@@ -2,11 +2,15 @@ body{
   background-color: #ADD8E6;
   font-family: 'Cabin Sketch', cursive;
   color: white;
-  width: 100%
+  width: 950px;
+  margin: 0 auto;
 }
 
+h1{
+  font-size: 60px;
+}
 .container {
-  width: 100%;
+  margin: 0 auto;
 }
 
 .floatLeft {
@@ -37,10 +41,14 @@ body{
   margin-top: 5px;
 }
 
+.keyboard {
+  margin: 0 auto;
+}
+
 .keys {
   height: 40px;
   width: 40px;
-  font-size: 20px;
+  font-size: 30px;
   border: 2px white solid;
   border-radius: 3px;
   font-weight: bold;
@@ -49,7 +57,7 @@ body{
   background-color:#ADD8E6;
   margin: 14px;
   display: inline-block;
-  padding-top:3px;
+  padding-top:6px;
 }
 
 .head {
@@ -248,4 +256,9 @@ body{
   left: 30px;
   position: relative;
   opacity: 0;
+}
+
+.clearfix {
+  clear: both;
+  margin: 0 auto;
 }
