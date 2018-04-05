@@ -1,3 +1,10 @@
+body{
+  background-color: #ADD8E6;
+  margin: 0 auto;
+  width: 950px;
+
+}
+
 .wordLetters {
   background-color: papayawhip;
   height: 40px;
@@ -9,4 +16,79 @@
   text-align: center;
   display: inline-block;
   margin-right: 10px;
+  margin-top: 5px;
+}
+
+.keys {
+  height: 40px;
+  width: 40px;
+  font-size: 20px;
+  border: 2px white solid;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+  background-color:#ADD8E6;
+  margin: 14px;
+  display: inline-block;
+  padding-top:3px;
+}
+
+#head {
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+#body {
+  background: white;
+  width: 2px;
+  height: 100px;
+  left: 20px;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+#arms {
+  background: white;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  top: -50px;
+  position: relative;
+  opacity: 0;
+}
+
+#right{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(20deg);
+  position: relative;
+  left: -13px;
+  top: -10px;
+  opacity: 0;
+}
+
+#left{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(-20deg);
+  position: relative;
+  left: 14px;
+  top: -84px;
+  opacity: 0;
+}
+
+.hangman {
+  text-align:center;
+  width: 200px;
+  height:300px;
 }
