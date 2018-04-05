@@ -3,18 +3,43 @@
     <meta charset="utf-8">
     <title></title>
     <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script type="text/javascript" src="./app.js"></script>
   </head>
   <body>
-    <div class="reel"></div>
+    <h1>Hangman</h1>
     <div class="keyboard"></div>
-    <div class="hangman">
-    <div id="head"></div>
-    <div id="body"></div>
-    <div id="arms"></div>
-    <div id="right"></div>
-    <div id="left"></div>
+    <div class="reel"></div>
+    <div class="container">
+      <div class="floatLeft">
+        <div class="player-one-hangman">
+           <h4 class="player" id="p1">Player One</h4>
+           <div class="top"></div>
+           <div class="rope"></div>
+           <div class="head"></div>
+           <div class="torso"></div>
+           <div class="arms"></div>
+           <div class="right"></div>
+           <div class="left"></div>
+           <div class="stand"></div>
+           <div class="floor"></div>
+         </div>
+      </div>
+      <div class="floatRight">
+        <div class="player-two-hangman">
+          <h4 class="player" id="p2">Player Two</h4>
+          <div class="top1"></div>
+          <div class="rope1"></div>
+          <div class="head1"></div>
+          <div class="torso1"></div>
+          <div class="arms1"></div>
+          <div class="right1"></div>
+          <div class="left1"></div>
+          <div class="stand1"></div>
+          <div class="floor1"></div>
+        </div>
+      </div>
     </div>
   </body>
 </html>

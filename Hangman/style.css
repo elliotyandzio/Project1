@@ -1,12 +1,30 @@
 body{
   background-color: #ADD8E6;
-  margin: 0 auto;
-  width: 950px;
+  font-family: 'Cabin Sketch', cursive;
+  color: white;
+  width: 100%
+}
 
+.container {
+  width: 100%;
+}
+
+.floatLeft {
+  float: left;
+  width: 400px;
+}
+
+
+.floatRight {
+  float: right;
+  width: 400px;
+}
+
+.reel {
+  margin: 0 auto;
 }
 
 .wordLetters {
-  background-color: papayawhip;
   height: 40px;
   width: 40px;
   border: 2px black solid;
@@ -34,7 +52,7 @@ body{
   padding-top:3px;
 }
 
-#head {
+.head {
     background: transparent;
     width: 100px;
     height: 100px;
@@ -44,7 +62,7 @@ body{
     opacity: 0;
 }
 
-#body {
+.torso {
   background: white;
   width: 2px;
   height: 100px;
@@ -53,7 +71,7 @@ body{
   opacity: 0;
 }
 
-#arms {
+.arms {
   background: white;
   width: 100px;
   height: 2px;
@@ -63,7 +81,7 @@ body{
   opacity: 0;
 }
 
-#right{
+.right{
   background: white;
   width: 2px;
   height: 75px;
@@ -75,7 +93,7 @@ body{
   opacity: 0;
 }
 
-#left{
+.left{
   background: white;
   width: 2px;
   height: 75px;
@@ -87,8 +105,147 @@ body{
   opacity: 0;
 }
 
-.hangman {
+.player-one-hangman {
   text-align:center;
+  width: 400px;
+  height:500px;
+  float: left;
+}
+
+.rope {
+  width: 2px;
+  height: 50px;
+  background-color: white;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.top {
+  width: 130px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: white;
+  left: -64px;
+  position: relative;
+  opacity: 0;
+}
+
+.stand {
+  width: 2px;
+  height: 390px;
+  background-color: white;
+  top: -408px;
+  left: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+.floor{
   width: 200px;
-  height:300px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+  top: -408px;
+  left: -30px;
+  position: relative;
+  opacity: 0;
+}
+
+.head1 {
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.torso1 {
+  background: white;
+  width: 2px;
+  height: 100px;
+  left: 20px;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.arms1 {
+  background: white;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  top: -50px;
+  position: relative;
+  opacity: 0;
+}
+
+.right1{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(20deg);
+  position: relative;
+  left: -13px;
+  top: -10px;
+  opacity: 0;
+}
+
+.left1{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(-20deg);
+  position: relative;
+  left: 14px;
+  top: -84px;
+  opacity: 0;
+}
+
+.player-two-hangman {
+  text-align:center;
+  width: 400px;
+  height:500px;
+  float: right;
+}
+
+.rope1 {
+  width: 2px;
+  height: 50px;
+  background-color: white;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.top1 {
+  width: 130px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: white;
+  left: 64px;
+  position: relative;
+  opacity: 0;
+}
+
+.stand1 {
+  width: 2px;
+  height: 390px;
+  background-color: white;
+  top: -408px;
+  left: 328px;
+  position: relative;
+  opacity: 0;
+}
+
+.floor1 {
+  width: 200px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+  top: -408px;
+  left: 30px;
+  position: relative;
+  opacity: 0;
 }
