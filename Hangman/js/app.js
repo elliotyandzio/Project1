@@ -23,6 +23,8 @@ $(function() {
   let guess;
   let player1Score = 0;
   let player2Score = 0;
+  const audioPing = new Audio('./sounds/ping.mp3');
+  const audioBuzzer = new Audio('./sounds/buzzer.mp3');
 
   // adding players score
   // if indices.length === randomWord.length
@@ -56,6 +58,7 @@ $('#player2Score').text(player2Score);
           found = true;
           indices.push(guess);
           $(`.wordLetters:eq(${i})`).text(guess);
+          audioPing.play();
           console.log(indices.length, randomWord.length);
 
           //add to to each player score
@@ -69,17 +72,21 @@ $('#player2Score').text(player2Score);
 
           if(indices.length === randomWord.length) {
             if (player1Score > player2Score){
-              alert('Player One Wins');
+              $('#player1Score').text('Wins!');
+              $('#player2Score').text('Loses!');
             } else if (player1Score < player2Score) {
-              alert('Player Two Wins');
+              $('#player1Score').text('Loses!');
+              $('#player2Score').text('Wins!');
             } else {
-              alert('It is a draw');
+              $('#player1Score').text('Draw!');
+              $('#player2Score').text('Draw!');
             }
           }
         }
       }
       if(!found) {
         //for all incorrect guesses for player1 print a new part of the hangman
+        audioBuzzer.play();
         if(player2turn === false) {
           console.log('player1 turn!');
 
