@@ -1,0 +1,310 @@
+body{
+  background-color: #ADD8E6;
+  font-family: 'Cabin Sketch', cursive;
+  color: white;
+  width: 950px;
+  margin: 0 auto;
+}
+
+h1{
+  font-size: 60px;
+  text-align: center;
+}
+.container {
+  margin: 0 auto;
+}
+
+.floatLeft {
+  float: left;
+  width: 400px;
+}
+
+
+.floatRight {
+  float: right;
+  width: 400px;
+}
+
+.reel {
+  text-align: center;
+}
+
+.wordLetters {
+  height: 40px;
+  width: 40px;
+  border: 2px white solid;
+  border-radius: 3px;
+  font-size: 30px;
+  font-weight: bold;
+  text-align: center;
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.keyboard {
+  margin: 0 auto;
+  width: 850px;
+}
+
+.keys {
+  height: 40px;
+  width: 40px;
+  font-size: 30px;
+  border: 2px white solid;
+  border-radius: 3px;
+  font-weight: bold;
+  text-align: center;
+  color:white;
+  background-color:#ADD8E6;
+  margin-right: 18px;
+  margin-top: 7px;
+  display: inline-block;
+  padding-top:6px;
+}
+
+.head {
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.torso {
+  background: white;
+  width: 2px;
+  height: 100px;
+  left: 20px;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.arms {
+  background: white;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  top: -50px;
+  position: relative;
+  opacity: 0;
+}
+
+.right{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(20deg);
+  position: relative;
+  left: -13px;
+  top: -10px;
+  opacity: 0;
+}
+
+.left{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(-20deg);
+  position: relative;
+  left: 14px;
+  top: -84px;
+  opacity: 0;
+}
+
+.player-one-hangman {
+  text-align:center;
+  width: 400px;
+  height:500px;
+  float: left;
+}
+
+.rope {
+  width: 2px;
+  height: 50px;
+  background-color: white;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.top {
+  width: 130px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: white;
+  left: -64px;
+  position: relative;
+  opacity: 0;
+}
+
+.stand {
+  width: 2px;
+  height: 390px;
+  background-color: white;
+  top: -408px;
+  left: 70px;
+  position: relative;
+  opacity: 0;
+}
+
+.floor{
+  width: 200px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+  top: -408px;
+  left: -30px;
+  position: relative;
+  opacity: 0;
+}
+
+.head1 {
+    background: transparent;
+    width: 100px;
+    height: 100px;
+    border: 2px solid white;
+    border-radius: 50%;
+    margin: 0 auto;
+    opacity: 0;
+}
+
+.torso1 {
+  background: white;
+  width: 2px;
+  height: 100px;
+  left: 20px;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.arms1 {
+  background: white;
+  width: 100px;
+  height: 2px;
+  margin: 0 auto;
+  top: -50px;
+  position: relative;
+  opacity: 0;
+}
+
+.right1{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(20deg);
+  position: relative;
+  left: -13px;
+  top: -10px;
+  opacity: 0;
+}
+
+.left1{
+  background: white;
+  width: 2px;
+  height: 75px;
+  margin: 0 auto;
+  transform: rotate(-20deg);
+  position: relative;
+  left: 14px;
+  top: -84px;
+  opacity: 0;
+}
+
+.player-two-hangman {
+  text-align:center;
+  width: 400px;
+  height:500px;
+  float: right;
+}
+
+.rope1 {
+  width: 2px;
+  height: 50px;
+  background-color: white;
+  margin: 0 auto;
+  opacity: 0;
+}
+
+.top1 {
+  width: 130px;
+  height: 2px;
+  margin: 0 auto;
+  background-color: white;
+  left: 64px;
+  position: relative;
+  opacity: 0;
+}
+
+.stand1 {
+  width: 2px;
+  height: 390px;
+  background-color: white;
+  top: -408px;
+  left: 328px;
+  position: relative;
+  opacity: 0;
+}
+
+.floor1 {
+  width: 200px;
+  height: 2px;
+  background-color: white;
+  margin: 0 auto;
+  top: -408px;
+  left: 30px;
+  position: relative;
+  opacity: 0;
+}
+
+.clearfix {
+  clear: both;
+  text-align: center;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 270px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #ADD8E6;
+    margin: auto;
+    padding: 20px;
+    border: 2px solid white;
+    width: 80%;
+    font-size: 40px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#reset {
+  border-radius: 5px;
+  border: 2px solid white;
+  background-color: #ADD8E6;
+  font-size: 25px;
+  color: white;
+  padding: 10px;
+}
+
+.turn {
+  font-size: 25px;
+}
+
+#p1, #p2 {
+  font-size: 25px;
+}
