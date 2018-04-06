@@ -25,12 +25,14 @@ $(function() {
   let player2Score = 0;
   const audioPing = new Audio('./sounds/ping.mp3');
   const audioBuzzer = new Audio('./sounds/buzzer.mp3');
-
+  const modal = $('#myModal');
+  const winningMessage = $('#winningMessage');
+  const $reset = $('#reset');
   // adding players score
   // if indices.length === randomWord.length
   // compare the score in order to determinate the winner
 
-  $('.clearfix').append('<div class="turn"></div>');
+  $('.clearfix').prepend('<div class="turn"></div>');
   const $turn = $('.turn');
   $turn.text('Player 1 turn');
 
@@ -46,6 +48,11 @@ $(function() {
   for (let k = 0; k<alphabet.length; k++){
     $('.keyboard').append('<div class="keys">' + alphabet[k] + '</div>');
   }
+
+  //reset button function to play another game
+  $reset.click(function()  {
+    location.reload();
+  });
 
 
 
@@ -74,12 +81,18 @@ $(function() {
 
           if(indices.length === randomWord.length) {
             if (player1Score > player2Score){
+              modal.css('display', 'block');
+              winningMessage.text('Player One Wins!!!');
               $('#player1Score').text('Wins!');
               $('#player2Score').text('Loses!');
             } else if (player1Score < player2Score) {
+              modal.css('display', 'block');
+              winningMessage.text('Player Two Wins!!!');
               $('#player1Score').text('Loses!');
               $('#player2Score').text('Wins!');
             } else {
+              modal.css('display', 'block');
+              winningMessage.text('Draw!!!');
               $('#player1Score').text('Draw!');
               $('#player2Score').text('Draw!');
             }
@@ -122,15 +135,11 @@ $(function() {
           } else if(stand === true && right === false && head === true && body === true && arms === true && left === true) {
             $('.right').css('opacity', '1');
             right = true;
-
-            console.log('player2 turn!');
-          } else {
-            alert('You have run out of life .... GAME OVER - Player Two Wins!');
-            console.log('gameover!!');
+            modal.css('display', 'block');
+            winningMessage.text('Player Two Wins!!!');
           }
           $turn.text('Player 2 turn');
           player2turn = true;
-          console.log('after player2 has been changed to true--->', player2turn);
           // *******************************
 
           //print all the hangman elements for a incorrect guess for player 2.
@@ -158,13 +167,11 @@ $(function() {
           } else if(stand1 === true && right1 === false && head1 === true && body1 === true && arms1 === true && left1 === true) {
             $('.right1').css('opacity', '1');
             right1 = true;
-
-          } else {
-            alert('You have run out of life .... GAME OVER - Player One Wins!');
+            modal.css('display', 'block');
+            winningMessage.text('Player One Wins!!!');
           }
           $turn.text('Player 1 turn');
           player2turn = false;
-          console.log('after player2 has been changed to false--->', player2turn);
         }
       }
       found = false;
