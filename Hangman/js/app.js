@@ -3,7 +3,8 @@ $(function() {
   const alphabet = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h',
     'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's',
     't', 'u', 'v', 'w', 'x', 'y', 'z'];
-  const library  = ['banana', 'orange', 'apple', 'mango'];
+  const library  = ['banana', 'orange', 'apple', 'mango', 'strawberry', 'melon', 'chelsea', 'arsenal',
+  'fulham', 'barcelona', 'milan', 'rome', 'paris', 'london' ];
   const randomWord = library[Math.floor(Math.random()*library.length)];
   console.log('chosenWord-->', randomWord);
   let found = false;
